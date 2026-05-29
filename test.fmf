@@ -1,0 +1,7 @@
+summary:
+    Check cockpit-session SELinux context
+
+require:
+  - cockpit-ws
+
+test: ls -lZ /usr/libexec/cockpit-session

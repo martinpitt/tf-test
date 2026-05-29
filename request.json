@@ -1,0 +1,16 @@
+{
+    "test": {
+        "tmt": {
+            "url": "https://github.com/martinpitt/tf-test.git",
+            "ref": "main"
+        }
+    },
+    "environments": [
+        {
+            "arch": "x86_64",
+            "os": {
+                "compose": "CentOS-Stream-10-image-mode"
+            }
+        }
+    ]
+}
