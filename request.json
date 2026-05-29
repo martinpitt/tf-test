@@ -10,7 +10,27 @@
             "arch": "x86_64",
             "os": {
                 "compose": "CentOS-Stream-10-image-mode"
-            }
+            },
+            "artifacts": [
+                {
+                    "id": "10523071:centos-stream-10-x86_64",
+                    "type": "fedora-copr-build",
+                    "packages": [
+                        "cockpit-bridge-362.dev18+g098eefda0-1.el10.noarch",
+                        "cockpit-system-362.dev18+g098eefda0-1.el10.noarch",
+                        "cockpit-ws-selinux-362.dev18+g098eefda0-1.el10.x86_64",
+                        "cockpit-storaged-362.dev18+g098eefda0-1.el10.noarch",
+                        "cockpit-doc-362.dev18+g098eefda0-1.el10.noarch",
+                        "cockpit-362.dev18+g098eefda0-1.el10.x86_64",
+                        "cockpit-ws-362.dev18+g098eefda0-1.el10.x86_64",
+                        "cockpit-debuginfo-362.dev18+g098eefda0-1.el10.x86_64",
+                        "cockpit-packagekit-362.dev18+g098eefda0-1.el10.noarch",
+                        "cockpit-debugsource-362.dev18+g098eefda0-1.el10.x86_64"
+                    ],
+                    "install": true,
+                    "order": 30
+                }
+            ]
         }
     ]
 }
