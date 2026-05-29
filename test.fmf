@@ -25,5 +25,5 @@
     - targetcli
     - tlog
     - tuned
-  test: ls -lZ /usr/libexec/cockpit-session
+  test: sh -exc 'ls -lZ /usr/libexec/cockpit-session; bootc status'
   duration: 10m
