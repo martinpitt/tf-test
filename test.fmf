@@ -1,7 +1,29 @@
-summary:
-    Check cockpit-session SELinux context
-
-require:
-  - cockpit-ws
-
-test: ls -lZ /usr/libexec/cockpit-session
+/main:
+  summary: Check cockpit-session SELinux context
+  require:
+    # ourself
+    - cockpit
+    # done in browser.sh, see https://issues.redhat.com/browse/TFT-2564
+    # - cockpit-kdump
+    # - cockpit-networkmanager
+    # - cockpit-sosreport
+    - cockpit-packagekit
+    # build/test infra dependencies
+    - podman
+    # required by tests
+    - createrepo_c
+    - dnf-automatic
+    - firewalld
+    - glibc-all-langpacks
+    - libvirt-daemon-config-network
+    # for semanage
+    - policycoreutils-python-utils
+    - rpm-build
+    - sssd
+    - sssd-dbus
+    - subscription-manager
+    - targetcli
+    - tlog
+    - tuned
+  test: ls -lZ /usr/libexec/cockpit-session
+  duration: 10m
